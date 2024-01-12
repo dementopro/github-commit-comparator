@@ -1,0 +1,111 @@
+.repository-list {
+    width: 100%;
+    max-width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.repository-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-left: 15px solid var(--repo-border-color, transparent);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: white;
+    background-color: #272736;
+}
+
+.repository-details {
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.remove-repository {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.repository-list:hover .repository-item.hd {
+    opacity: 1;
+}
+
+.repository-list:hover .repository-item.nhd {
+    opacity: .2;
+}
+
+.remove-repository button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.repository-list .repository-item.hd:hover .remove-repository {
+    visibility: visible;
+    opacity: 1;
+}
+
+.repository-title {
+    padding: 10px;
+    font-size: large;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+
+.commit-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.commit-count {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    font-weight: bold;
+}
+
+.commit-count img {
+    margin-right: 5px;
+}
+
+.commit-date {
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+@media (max-width: 1800px) {
+    .repository-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .commit-detail {
+        overflow: hidden;
+        position: static;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .remove-repository {
+        align-self: auto;
+    }
+}

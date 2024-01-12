@@ -1,0 +1,10 @@
+.commit-icon-container {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .commit-icon {
+    margin-right: 8px;
+  }
+  
